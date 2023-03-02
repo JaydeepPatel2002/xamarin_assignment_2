@@ -16,7 +16,11 @@ namespace assignment
         {
             InitializeComponent();
 
-            MainPage = new customerListPage();
+            MainPage = new NavigationPage(new customerListPage());
+            ToolbarItem tb = new ToolbarItem { Text="products"};
+            ToolbarItem tb2 = new ToolbarItem { Text="settings"};
+            MainPage.ToolbarItems.Add(tb);
+            MainPage.ToolbarItems.Add(tb2);
             //NewUI();
         }
 

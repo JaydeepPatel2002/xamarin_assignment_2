@@ -28,11 +28,11 @@ namespace assignment
                 IsPullToRefreshEnabled = true
             };
             //===========Important code but not for now=====================================================================================
-            // listView.ItemTapped += (sender, e) => {
-            //     listView.SelectedItem = null;
-            //     Navigation.PushModalAsync(new FruitDetailPage(e.Item as Fruit));
-            //     //((ObservableCollection<Fruit>)listView.ItemsSource).Remove((Fruit)e.Item);
-            // };
+             listView.ItemTapped += (sender, e) => {
+                 listView.SelectedItem = null;
+                 Navigation.PushModalAsync(new AddCustomerPage());
+                 //((ObservableCollection<Fruit>)listView.ItemsSource).Remove((Fruit)e.Item);
+             };
             Title = "Customers";
             //================================================================================================
             StackLayout layout = new StackLayout();
@@ -42,7 +42,8 @@ namespace assignment
             {
                 
                 Toast.MakeText(Android.App.Application.Context, string.Join(", ", list2.Select(x => x.FirstName)), ToastLength.Short)?.Show();
-                
+                Navigation.PushAsync(new AddCustomerPage());
+
             };
             layout.Children.Add(listView);
             layout.Children.Add(btnAddCust);
