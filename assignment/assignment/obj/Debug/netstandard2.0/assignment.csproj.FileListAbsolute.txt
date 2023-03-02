@@ -16,3 +16,4 @@ C:\Users\patel1637\RiderProjects\assignment\assignment\assignment\bin\Debug\nets
 C:\Users\patel1637\RiderProjects\assignment\assignment\assignment\obj\Debug\netstandard2.0\assignment.csproj.CopyComplete
 C:\Users\patel1637\RiderProjects\assignment\assignment\assignment\obj\Debug\netstandard2.0\customerListPage.xaml.g.cs
 C:\Users\patel1637\RiderProjects\assignment\assignment\assignment\obj\Debug\netstandard2.0\AddCustomerPage.xaml.g.cs
+C:\Users\patel1637\RiderProjects\assignment\assignment\assignment\obj\Debug\netstandard2.0\InteractionListPage.xaml.g.cs

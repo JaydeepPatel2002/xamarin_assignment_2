@@ -30,7 +30,7 @@ namespace assignment
             //===========Important code but not for now=====================================================================================
              listView.ItemTapped += (sender, e) => {
                  listView.SelectedItem = null;
-                 Navigation.PushModalAsync(new AddCustomerPage());
+                 Navigation.PushAsync(new InteractionListPage(e.Item as Customers));
                  //((ObservableCollection<Fruit>)listView.ItemsSource).Remove((Fruit)e.Item);
              };
             Title = "Customers";
@@ -41,7 +41,7 @@ namespace assignment
              btnAddCust.Clicked += (sender, e)=>
             {
                 
-                Toast.MakeText(Android.App.Application.Context, string.Join(", ", list2.Select(x => x.FirstName)), ToastLength.Short)?.Show();
+                Toast.MakeText(Android.App.Application.Context, string.Join(", ", list2.Select(x => x.ID)), ToastLength.Short)?.Show();
                 Navigation.PushAsync(new AddCustomerPage());
 
             };

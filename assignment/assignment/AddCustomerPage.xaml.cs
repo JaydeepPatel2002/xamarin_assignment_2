@@ -15,7 +15,7 @@ namespace assignment
     {
         public AddCustomerPage()
         {
-            Title = "Add new customer";
+            Title = "constructor new customer";
             Content = new Label
             {
                 Text = "here is a description",
@@ -23,7 +23,7 @@ namespace assignment
                 VerticalOptions = LayoutOptions.CenterAndExpand,
             };
             
-            Title = "Add new customer from second title";
+            Title = "new customer";
             StackLayout layout = new StackLayout { HorizontalOptions = LayoutOptions.Center };
 
             TableView table = new TableView { Intent = TableIntent.Form };

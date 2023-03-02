@@ -68,8 +68,55 @@ namespace assignment
                 SaveCustomer(cust3);
                 
             }
-            
-            
+
+            if (database.Table<Interactions>().Count() == 0) //if no records  make one
+            {
+                Interactions Int1 = new Interactions();
+                Interactions Int2 = new Interactions();
+                Interactions Int3 = new Interactions();
+                Interactions Int4 = new Interactions();
+                Interactions Int5 = new Interactions();
+
+                Int1.CustomerID = 1;
+                Int1.Date = new DateTime(2018, 1, 15);
+                Int1.Comments = "good talk";
+                Int1.ProductID = 1;
+                Int1.Purchased = false;
+                
+                Int2.CustomerID = 1;
+                Int2.Date = new DateTime(2018, 2, 16);
+                Int2.Comments = "NICE talk";
+                Int2.ProductID = 2;
+                Int2.Purchased = false;
+                
+                Int3.CustomerID = 1;
+                Int3.Date = new DateTime(2018, 3, 17);
+                Int3.Comments = "bad talk";
+                Int3.ProductID = 3;
+                Int3.Purchased = false;
+                
+                Int4.CustomerID = 2;
+                Int4.Date = new DateTime(2018, 4, 18);
+                Int4.Comments = "spicy talk";
+                Int4.ProductID = 2;
+                Int4.Purchased = false;
+                
+                Int5.CustomerID = 2;
+                Int5.Date = new DateTime(2018, 5, 19);
+                Int5.Comments = "sweet talk";
+                Int5.ProductID = 1;
+                Int5.Purchased = false;
+
+                SaveInteraction(Int1);
+                SaveInteraction(Int2);
+                SaveInteraction(Int3);
+                SaveInteraction(Int4);
+                SaveInteraction(Int5);
+
+
+            }
+
+
         }
         
         public int SaveProduct(Products item)
@@ -161,6 +208,11 @@ namespace assignment
         public List<Interactions> GetAllInteractions()
         {
             return database.Table<Interactions>().ToList<Interactions>();
+        }
+        
+        public List<Interactions> GetInteractionsOfCustomer(int id)
+        {
+            return database.Table<Interactions>().Where(i => i.CustomerID == id).ToList();
         }
 
 
