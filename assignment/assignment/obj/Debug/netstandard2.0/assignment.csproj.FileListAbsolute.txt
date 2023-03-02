@@ -1,0 +1,17 @@
+C:\Users\patel1637\RiderProjects\assignment\assignment\assignment\bin\Debug\netstandard2.0\assignment.deps.json
+C:\Users\patel1637\RiderProjects\assignment\assignment\assignment\bin\Debug\netstandard2.0\assignment.dll
+C:\Users\patel1637\RiderProjects\assignment\assignment\assignment\bin\Debug\netstandard2.0\assignment.pdb
+C:\Users\patel1637\RiderProjects\assignment\assignment\assignment\obj\Debug\netstandard2.0\assignment.csproj.AssemblyReference.cache
+C:\Users\patel1637\RiderProjects\assignment\assignment\assignment\obj\Debug\netstandard2.0\assignment.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\patel1637\RiderProjects\assignment\assignment\assignment\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\patel1637\RiderProjects\assignment\assignment\assignment\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\patel1637\RiderProjects\assignment\assignment\assignment\obj\Debug\netstandard2.0\assignment.AssemblyInfoInputs.cache
+C:\Users\patel1637\RiderProjects\assignment\assignment\assignment\obj\Debug\netstandard2.0\assignment.AssemblyInfo.cs
+C:\Users\patel1637\RiderProjects\assignment\assignment\assignment\obj\Debug\netstandard2.0\assignment.csproj.CoreCompileInputs.cache
+C:\Users\patel1637\RiderProjects\assignment\assignment\assignment\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\patel1637\RiderProjects\assignment\assignment\assignment\obj\Debug\netstandard2.0\assignment.dll
+C:\Users\patel1637\RiderProjects\assignment\assignment\assignment\obj\Debug\netstandard2.0\assignment.pdb
+C:\Users\patel1637\RiderProjects\assignment\assignment\assignment\bin\Debug\netstandard2.0\Mono.Android.dll
+C:\Users\patel1637\RiderProjects\assignment\assignment\assignment\bin\Debug\netstandard2.0\Mono.Android.pdb
+C:\Users\patel1637\RiderProjects\assignment\assignment\assignment\obj\Debug\netstandard2.0\assignment.csproj.CopyComplete
+C:\Users\patel1637\RiderProjects\assignment\assignment\assignment\obj\Debug\netstandard2.0\customerListPage.xaml.g.cs

@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <DebugType>pdbonly</DebugType>
+        <DebugSymbols>true</DebugSymbols>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="sqlite-net-pcl" Version="1.9.141-beta" />
+        <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="Mono.Android">
+        <HintPath>..\..\..\..\AppData\Local\JetBrains\BuildTools\ReferenceAssemblies\MonoAndroid\v11.0\Mono.Android.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+</Project>
