@@ -9,5 +9,8 @@ namespace assignment
         public string ProductName { get; set; } // Name of the product
         public string Description { get; set; } // Description of the product
         public double Price { get; set; } // Price of the product
+
+        private int _NumInteractions = 0;
+        public int NumInteractions { get; set; }
     }
 }

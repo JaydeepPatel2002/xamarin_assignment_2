@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
 using Android.Widget;
 using assignment;
 using Xamarin.Forms;
@@ -81,8 +82,8 @@ namespace LO5TableListEx
                         Text = "Flag",
                         BackgroundColor = Color.Yellow,
                         IconImageSource = "flag.png",
-                        //Command = new Command(() => FlagItem((MyModel)BindingContext))
-                        Command = new Command(() =>Toast.MakeText(Android.App.Application.Context, "you got some serious reward", ToastLength.Short)?.Show())
+                        Command = new Command(() => FlagItem((Interactions)BindingContext))
+                        //Command = new Command(() =>Toast.MakeText(Android.App.Application.Context, "you got some serious reward", ToastLength.Short)?.Show())
                     }
                 },
                 Content = new StackLayout
@@ -118,6 +119,18 @@ namespace LO5TableListEx
 
         }
         
+        private void FlagItem(Interactions item)
+        {
+            database = Database;
+            int id = item.ProductID;
+
+            Products num2 = database.GetOneProduct(id);
+            int num = num2.NumInteractions;
+            String temp = "num is :- " + num; 
+            Toast.MakeText(Android.App.Application.Context, "num" + num, ToastLength.Short)?.Show();
+            // Flag the selected item
+        }
+        
         static Database database;
         public static Database Database
         {
@@ -132,10 +145,7 @@ namespace LO5TableListEx
             }
         }
         //
-        // private void FlagItem(MyModel item)
-        // {
-        //     // Flag the selected item
-        // }
+       
     }
 
 }

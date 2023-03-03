@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Android.Widget;
 using SQLite;
 
 namespace assignment
@@ -13,7 +14,9 @@ namespace assignment
         {
             database = new SQLiteConnection(dbPath);
             //database.DropTable<FuelPurchase>(); // can call this to drop if needed
-            
+            database.DropTable<Customers>();
+            database.DropTable<Interactions>();
+            database.DropTable<Products>();
             database.CreateTable<Customers>(); // won’t do anything if already exists
             database.CreateTable<Interactions>(); // won’t do anything if already exists
             database.CreateTable<Products>(); // won’t do anything if already exists
@@ -26,12 +29,19 @@ namespace assignment
                 prod1.ProductName = "Wonder Jacket";
                 prod1.Description = "A wonderful jacket";
                 prod1.Price = 499.99;
+                prod1.NumInteractions = 0;
+                
                 prod2.ProductName = "Wonder Hat";
                 prod2.Description = "A wonderful Hat";
                 prod2.Price = 124.99;
+                prod1.NumInteractions = 0;
+
+                
                 prod3.ProductName = "Wonder Boots";
                 prod3.Description = "A wonderful Boots";
                 prod3.Price = 224.99;
+                prod1.NumInteractions = 0;
+
                 
                 SaveProduct(prod1);
                 SaveProduct(prod2);
@@ -143,6 +153,15 @@ namespace assignment
         {
             return database.Table<Products>().ToList<Products>();
         }
+
+        public void UpdateNumInteractionOfProduct(int id)
+        {
+            Products tmpProd = this.GetOneProduct(id);
+            tmpProd.NumInteractions++;
+            database.Update(tmpProd);
+            Toast.MakeText(Android.App.Application.Context, "-->"+tmpProd.NumInteractions, ToastLength.Short)?.Show();
+
+        }
         
         
         //======================================================================================
@@ -190,6 +209,7 @@ namespace assignment
             }
             else
             {
+                UpdateNumInteractionOfProduct(item.ProductID);
                 return database.Insert(item);
             }
         }
