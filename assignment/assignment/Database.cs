@@ -87,7 +87,7 @@ namespace assignment
                 Int2.Date = new DateTime(2018, 2, 16);
                 Int2.Comments = "NICE talk";
                 Int2.ProductID = 2;
-                Int2.Purchased = false;
+                Int2.Purchased = true;
                 
                 Int3.CustomerID = 1;
                 Int3.Date = new DateTime(2018, 3, 17);
@@ -99,7 +99,7 @@ namespace assignment
                 Int4.Date = new DateTime(2018, 4, 18);
                 Int4.Comments = "spicy talk";
                 Int4.ProductID = 2;
-                Int4.Purchased = false;
+                Int4.Purchased = true;
                 
                 Int5.CustomerID = 2;
                 Int5.Date = new DateTime(2018, 5, 19);

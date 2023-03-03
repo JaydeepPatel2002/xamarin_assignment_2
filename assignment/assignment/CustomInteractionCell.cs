@@ -12,10 +12,10 @@ namespace LO5TableListEx
         public CustomInteractionCell()
         {
             var fNameLabel = new Label { FontAttributes = FontAttributes.Bold };
-            fNameLabel.SetBinding(Label.TextProperty, "FirstName");
+            fNameLabel.SetBinding(Label.TextProperty, "CustFirstName");
             
             var lNameLabel = new Label { FontAttributes = FontAttributes.Bold };
-            lNameLabel.SetBinding(Label.TextProperty, "FirstName");
+            lNameLabel.SetBinding(Label.TextProperty, "CustLastName");
 
             var dateLabel = new Label { TextColor = Color.Gray };
             dateLabel.SetBinding(Label.TextProperty, "Date", stringFormat: "{0:D}");
@@ -24,7 +24,7 @@ namespace LO5TableListEx
             commentLabel.SetBinding(Label.TextProperty, "Comments");
             
             var productLabel = new Label { TextColor = Color.Gray };
-            productLabel.SetBinding(Label.TextProperty, "ProductID");
+            productLabel.SetBinding(Label.TextProperty, "ProDuctName");
             
             Switch purchasedLabel = new Switch { HorizontalOptions=LayoutOptions.Start, IsEnabled=false};
             purchasedLabel.SetBinding(Switch.IsToggledProperty, "Purchased");
