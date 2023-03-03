@@ -1,5 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using Android.Widget;
+using assignment;
 using Xamarin.Forms;
 using Switch = Xamarin.Forms.Switch;
 
@@ -68,8 +69,8 @@ namespace LO5TableListEx
                         Text = "Delete",
                         BackgroundColor = Color.Red,
                         IconImageSource = "delete.png",
-                        //Command = new Command(() => DeleteItem((MyModel)BindingContext))
-                        Command = new Command(() =>Toast.MakeText(Android.App.Application.Context, "you got some serious success", ToastLength.Short)?.Show())
+                        Command = new Command(() => DeleteItem((Interactions)BindingContext))
+                        //Command = new Command(() =>Toast.MakeText(Android.App.Application.Context, "you got some serious success", ToastLength.Short)?.Show())
                     }
                 },
                 RightItems = new SwipeItems
@@ -110,10 +111,26 @@ namespace LO5TableListEx
             View = swipeView;
         }
 
-        // private void DeleteItem(MyModel item)
-        // {
-        //     // Delete the selected item
-        // }
+        private void DeleteItem(Interactions item)
+        {
+            database = Database;
+            database.DeleteInteractions(item);
+
+        }
+        
+        static Database database;
+        public static Database Database
+        {
+            get
+            {
+                if (database == null)
+                {
+                    var file_path = DependencyService.Get<IFileHelper>().GetLocalFilePath("assignment.db3");
+                    database = new Database(file_path);
+                }
+                return database;
+            }
+        }
         //
         // private void FlagItem(MyModel item)
         // {
