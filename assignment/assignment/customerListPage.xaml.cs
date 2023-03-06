@@ -14,6 +14,9 @@ namespace assignment
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class customerListPage : ContentPage
     {
+        
+        public static ListView listView = new ListView();
+
         public customerListPage()
         {
             database = Database;
@@ -36,8 +39,8 @@ namespace assignment
             }
             // StackLayout layout = new StackLayout();
             // //List<Products> list = database.GetAllProducts();
-            List<Customers> list2 = database.GetAllCustomers();
-            var listView = new ListView
+            List<Customers> list2 = database.GetAllCustomers(); 
+            listView = new ListView
             {
                 ItemsSource = list2,
                 ItemTemplate = new DataTemplate(typeof(CustomViewCell)),

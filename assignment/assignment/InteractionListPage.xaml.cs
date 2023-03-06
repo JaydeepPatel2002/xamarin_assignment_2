@@ -21,6 +21,10 @@ namespace assignment
     public partial class InteractionListPage : ContentPage
     {
         private int productID;
+
+        public static ListView listView = new ListView();
+
+        public static List<Interactions> list2 = new List<Interactions>();
         private void OnPickerSelectedIndexChanged(object sender, EventArgs e)
         {
             if (sender is Picker picker && picker.SelectedItem != null)
@@ -56,8 +60,8 @@ namespace assignment
             {
                 Navigation.PushAsync(new SettingsPage());
             }
-            List<Interactions> list2 = database.GetInteractionsOfCustomer(customer.ID);
-            var listView = new ListView
+            list2 = database.GetInteractionsOfCustomer(customer.ID); 
+            listView = new ListView
             {
                 ItemsSource = list2,
                 ItemTemplate = new DataTemplate(typeof(CustomInteractionCell)),
@@ -127,9 +131,10 @@ namespace assignment
                 
                 List<Interactions> list3 = database.GetInteractionsOfCustomer(customer.ID);
 
-                Toast.MakeText(Android.App.Application.Context, string.Join(", ", list3.Select(x => x.Comments)), ToastLength.Short)?.Show();
+                //Toast.MakeText(Android.App.Application.Context, string.Join(", ", list3.Select(x => x.Comments)), ToastLength.Short)?.Show();
 
-                
+                listView.ItemsSource = null;
+                listView.ItemsSource = database.GetInteractionsOfCustomer(customer.ID);
                 //Navigation.PopAsync();
             };
             

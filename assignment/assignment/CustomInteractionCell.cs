@@ -116,6 +116,8 @@ namespace LO5TableListEx
         {
             database = Database;
             database.DeleteInteractions(item);
+            InteractionListPage.listView.ItemsSource = null;
+            InteractionListPage.listView.ItemsSource = database.GetInteractionsOfCustomer(item.CustomerID);
 
         }
         

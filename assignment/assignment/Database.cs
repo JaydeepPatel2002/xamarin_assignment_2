@@ -136,7 +136,11 @@ namespace assignment
             
             database.CreateTable<Customers>(); // won’t do anything if already exists
             database.CreateTable<Interactions>(); // won’t do anything if already exists
-            
+
+            InteractionListPage.listView.ItemsSource = null;
+            customerListPage.listView.ItemsSource = null;
+
+
         }
         
         public int SaveProduct(Products item)
@@ -179,22 +183,32 @@ namespace assignment
         //======================================================================================
         public int SaveCustomer(Customers item)
         {
+            int somthing = 0;
             if (item.ID != 0)
             {
-                return database.Update(item);
+                somthing = database.Update(item);
             }
             else
             {
-                return database.Insert(item);
+                somthing = database.Insert(item);
             }
+            customerListPage.listView.ItemsSource = null;
+            customerListPage.listView.ItemsSource = GetAllCustomers();
+            return somthing;
+
+
         }
         public int DeleteCustomer(Customers item)
         {
+            int somthing = 0;
             if (item == null)
             {
-                return -1;
+                somthing = -1;
             }
-            return database.Delete(item);
+            somthing = database.Delete(item);
+            customerListPage.listView.ItemsSource = null;
+            customerListPage.listView.ItemsSource = GetAllCustomers();
+            return somthing;
         }
         public Customers GetOneCustomer(int id)
         {
