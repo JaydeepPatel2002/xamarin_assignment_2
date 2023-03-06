@@ -159,7 +159,7 @@ namespace assignment
             Products tmpProd = this.GetOneProduct(id);
             tmpProd.NumInteractions++;
             database.Update(tmpProd);
-            Toast.MakeText(Android.App.Application.Context, "-->"+tmpProd.NumInteractions, ToastLength.Short)?.Show();
+            Toast.MakeText(Android.App.Application.Context, "updating database -> "+tmpProd.NumInteractions, ToastLength.Short)?.Show();
 
         }
         

@@ -3,6 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using Android.Widget;
 using Xamarin.Forms;
+using LO5TableListEx;
+using Xamarin.Forms;
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Android.Widget;
+using LO5TableListEx;
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+using ListView = Xamarin.Forms.ListView;
+
 using Xamarin.Forms.Xaml;
 using Button = Xamarin.Forms.Button;
 
@@ -17,10 +32,21 @@ namespace assignment
             InitializeComponent();
 
             MainPage = new NavigationPage(new customerListPage());
-            ToolbarItem tb = new ToolbarItem { Text="products"};
-            ToolbarItem tb2 = new ToolbarItem { Text="settings"};
-            MainPage.ToolbarItems.Add(tb);
-            MainPage.ToolbarItems.Add(tb2);
+            // ToolbarItem tb = new ToolbarItem { Text="products"};
+            // ToolbarItem tb2 = new ToolbarItem { Text="settings"};
+            // MainPage.ToolbarItems.Add(tb);
+            // MainPage.ToolbarItems.Add(tb2);
+            //
+            // tb.Clicked += ProductsToolbarItem_Clicked;
+            //
+            //  void ProductsToolbarItem_Clicked(object sender, EventArgs e)
+            // {
+            //     // Navigate to the products page
+            //     //Navigation.PushAsync(new Product)
+            //     
+            //     Navigation.PushAsync(new ProductListPage());
+            // }
+            
             //NewUI();
         }
 

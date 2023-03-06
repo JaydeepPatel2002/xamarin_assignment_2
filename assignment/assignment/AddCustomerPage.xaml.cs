@@ -15,6 +15,23 @@ namespace assignment
     {
         public AddCustomerPage()
         {
+            ToolbarItem tb = new ToolbarItem { Text="products"};
+            ToolbarItem tb2 = new ToolbarItem { Text="settings"};
+            ToolbarItems.Add(tb);
+            ToolbarItems.Add(tb2);
+
+            tb.Clicked += ProductsToolbarItem_Clicked;
+            tb2.Clicked += SettingToolbarItem_Clicked;
+            
+            void ProductsToolbarItem_Clicked(object sender, EventArgs e)
+            {
+                Navigation.PushAsync(new ProductListPage());
+            }
+            
+            void SettingToolbarItem_Clicked(object sender, EventArgs e)
+            {
+                Navigation.PushAsync(new SettingsPage());
+            }
             Title = "constructor new customer";
             Content = new Label
             {

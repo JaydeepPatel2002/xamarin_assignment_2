@@ -12,6 +12,8 @@ namespace assignment
         public MainPage()
         {
             InitializeComponent();
+            
+            
         }
     }
 }

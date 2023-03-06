@@ -17,3 +17,5 @@ C:\Users\patel1637\RiderProjects\assignment\assignment\assignment\obj\Debug\nets
 C:\Users\patel1637\RiderProjects\assignment\assignment\assignment\obj\Debug\netstandard2.0\customerListPage.xaml.g.cs
 C:\Users\patel1637\RiderProjects\assignment\assignment\assignment\obj\Debug\netstandard2.0\AddCustomerPage.xaml.g.cs
 C:\Users\patel1637\RiderProjects\assignment\assignment\assignment\obj\Debug\netstandard2.0\InteractionListPage.xaml.g.cs
+C:\Users\patel1637\RiderProjects\assignment\assignment\assignment\obj\Debug\netstandard2.0\ProductListPage.xaml.g.cs
+C:\Users\patel1637\RiderProjects\assignment\assignment\assignment\obj\Debug\netstandard2.0\SettingsPage.xaml.g.cs
