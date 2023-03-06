@@ -34,8 +34,9 @@ namespace assignment
         }
         private void OnButtonClicked(object sender, EventArgs e)
         {
+            database = Database;
             Toast.MakeText(Android.App.Application.Context, " setting page activated ", ToastLength.Short)?.Show();
-
+            database.resetDatabase();
         }
         static Database database;
         public static Database Database

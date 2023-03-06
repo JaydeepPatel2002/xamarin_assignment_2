@@ -128,6 +128,16 @@ namespace assignment
 
 
         }
+
+        public void resetDatabase()
+        {
+            database.DropTable<Customers>();
+            database.DropTable<Interactions>();
+            
+            database.CreateTable<Customers>(); // won’t do anything if already exists
+            database.CreateTable<Interactions>(); // won’t do anything if already exists
+            
+        }
         
         public int SaveProduct(Products item)
         {
