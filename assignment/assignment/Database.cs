@@ -177,6 +177,15 @@ namespace assignment
 
         }
         
+        public void decreseNumInteractionOfProduct(int id)
+        {
+            Products tmpProd = this.GetOneProduct(id);
+            tmpProd.NumInteractions--;
+            database.Update(tmpProd);
+            Toast.MakeText(Android.App.Application.Context, "updating database -> "+tmpProd.NumInteractions, ToastLength.Short)?.Show();
+
+        }
+        
         
         //======================================================================================
         //METHODS for customers
@@ -243,6 +252,7 @@ namespace assignment
             {
                 return -1;
             }
+            decreseNumInteractionOfProduct(item.ProductID);
             return database.Delete(item);
         }
         public Interactions GetOneInteraction(int id)
