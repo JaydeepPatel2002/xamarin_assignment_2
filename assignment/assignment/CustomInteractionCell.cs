@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.ObjectModel;
-using Android.Widget;
+//using Android.Widget;
 using assignment;
 using Xamarin.Forms;
 using Switch = Xamarin.Forms.Switch;
@@ -129,7 +129,7 @@ namespace LO5TableListEx
             Products num2 = database.GetOneProduct(id);
             int num = num2.NumInteractions;
             String temp = "num is :- " + num; 
-            Toast.MakeText(Android.App.Application.Context, "num" + num, ToastLength.Short)?.Show();
+            //Toast.MakeText(Android.App.Application.Context, "num" + num, ToastLength.Short)?.Show();
             // Flag the selected item
         }
         

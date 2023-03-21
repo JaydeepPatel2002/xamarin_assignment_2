@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Android.Widget;
+//using Android.Widget;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Button = Xamarin.Forms.Button;
@@ -35,7 +35,7 @@ namespace assignment
         private void OnButtonClicked(object sender, EventArgs e)
         {
             database = Database;
-            Toast.MakeText(Android.App.Application.Context, " setting page activated ", ToastLength.Short)?.Show();
+            //Toast.MakeText(Android.App.Application.Context, " setting page activated ", ToastLength.Short)?.Show();
             database.resetDatabase();
         }
         static Database database;

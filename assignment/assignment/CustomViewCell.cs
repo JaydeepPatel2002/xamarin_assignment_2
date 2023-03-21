@@ -1,5 +1,5 @@
 ﻿using System.Collections.ObjectModel;
-using Android.Widget;
+//using Android.Widget;
 using assignment;
 using Xamarin.Forms;
 namespace LO5TableListEx
@@ -42,7 +42,7 @@ namespace LO5TableListEx
                         BackgroundColor = Color.Yellow,
                         IconImageSource = "flag.png",
                         //Command = new Command(() => FlagItem((MyModel)BindingContext))
-                        Command = new Command(() =>Toast.MakeText(Android.App.Application.Context, "you got some serious reward", ToastLength.Short)?.Show())
+                        //Command = new Command(() =>Toast.MakeText(Android.App.Application.Context, "you got some serious reward", ToastLength.Short)?.Show())
                     }
                 },
                 Content = new StackLayout

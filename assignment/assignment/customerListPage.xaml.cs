@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Android.Widget;
+//using Android.Widget;
 using LO5TableListEx;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -61,7 +61,7 @@ namespace assignment
              btnAddCust.Clicked += (sender, e)=>
             {
                 
-                Toast.MakeText(Android.App.Application.Context, string.Join(", ", list2.Select(x => x.ID)), ToastLength.Short)?.Show();
+                //Toast.MakeText(Android.App.Application.Context, string.Join(", ", list2.Select(x => x.ID)), ToastLength.Short)?.Show();
                 Navigation.PushAsync(new AddCustomerPage());
 
             };

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Android.Widget;
+//using Android.Widget;
 using Xamarin.Forms;
 using LO5TableListEx;
 using Xamarin.Forms;
@@ -50,39 +50,39 @@ namespace assignment
             //NewUI();
         }
 
-        private void NewUI()
-        {
-            database = Database;
-            
-            StackLayout layout = new StackLayout();
-            List<Products> list = database.GetAllProducts();
-            List<Customers> list2 = database.GetAllCustomers();
-            
-            Button btnNew = new Button { Text = "experiment" };
-            Button btnNew2 = new Button { Text = "experiment" };
-            
-            btnNew.Clicked += (sender, e)=>
-            {
-                
-                Toast.MakeText(Android.App.Application.Context, string.Join(", ", list.Select(x => x.ProductName)), ToastLength.Short)?.Show();
-                
-            };
-            layout.Children.Add(btnNew);
-            
-            btnNew2.Clicked += (sender, e)=>
-            {
-                
-                Toast.MakeText(Android.App.Application.Context, string.Join(", ", list2.Select(x => x.FirstName)), ToastLength.Short)?.Show();
-                
-            };
-            layout.Children.Add(btnNew2);
-            
-            MainPage = new ContentPage
-            {
-                Content = layout
-            };
-
-        }
+        // private void NewUI()
+        // {
+        //     database = Database;
+        //     
+        //     StackLayout layout = new StackLayout();
+        //     List<Products> list = database.GetAllProducts();
+        //     List<Customers> list2 = database.GetAllCustomers();
+        //     
+        //     Button btnNew = new Button { Text = "experiment" };
+        //     Button btnNew2 = new Button { Text = "experiment" };
+        //     
+        //     btnNew.Clicked += (sender, e)=>
+        //     {
+        //         
+        //         Toast.MakeText(Android.App.Application.Context, string.Join(", ", list.Select(x => x.ProductName)), ToastLength.Short)?.Show();
+        //         
+        //     };
+        //     layout.Children.Add(btnNew);
+        //     
+        //     btnNew2.Clicked += (sender, e)=>
+        //     {
+        //         
+        //         Toast.MakeText(Android.App.Application.Context, string.Join(", ", list2.Select(x => x.FirstName)), ToastLength.Short)?.Show();
+        //         
+        //     };
+        //     layout.Children.Add(btnNew2);
+        //     
+        //     MainPage = new ContentPage
+        //     {
+        //         Content = layout
+        //     };
+        //
+        // }
 
         protected override void OnStart()
         {

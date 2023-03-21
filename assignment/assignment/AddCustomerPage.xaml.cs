@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Android.Widget;
+//using Android.Widget;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Button = Xamarin.Forms.Button;
@@ -73,7 +73,7 @@ namespace assignment
                 
                 List<Customers> list2 = database.GetAllCustomers();
 
-                Toast.MakeText(Android.App.Application.Context, string.Join(", ", list2.Select(x => x.FirstName)), ToastLength.Short)?.Show();
+                //Toast.MakeText(Android.App.Application.Context, string.Join(", ", list2.Select(x => x.FirstName)), ToastLength.Short)?.Show();
 
                 
                 Navigation.PopAsync();
